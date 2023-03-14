@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+<!--We create the landing page-->
+    <div>
+        <label for="2023prieces"></label>
+        <a href="{% url 'precios' %}">Costos 2023</a>
+         
+    </div>
+    <div>
+        <label for="I'm looking for a tratement"></label>
+        <a href="{%url 'tratamientos' %}">Busco un tratamiento en especifico</a>
+        
+    </div>
+    <div>
+        <label for="I'm searching disponibility"></label>
+        <a href="{% url 'disponibilidad' %}">Busco disponibilidad</a>
+        
+    </div>
+</body>
+</html>
