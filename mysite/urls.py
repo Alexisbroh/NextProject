@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('myapp.urls')),
     path('accounts/' , include('allauth.urls')),
     path('signup/', include('myapp.urls')),
+    
     # here told to the link that we need to link it and assigned a route
     # the same process we assigned a route 
 ]

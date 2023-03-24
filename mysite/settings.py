@@ -53,7 +53,7 @@ INSTALLED_APPS = [
 
 ]
 
-SITE_ID = 3                    #we assigned a port 
+SITE_ID = 3                   #we assigned a port 
 
 SOCIALACCOUNT_PROVIDERS = {                                #In my case we log in with google, these were our credentials after we created it in google console
     'google': {
@@ -155,3 +155,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK ='bootstrap4'#with this code we told to crispy what framework to applied styles we want
+
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend'
+] #Specify we are using django backend as well as the auth backend 
