@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contaac Forms</title>
+    <title>Contact Forms</title>
 </head>
 <body>
+    <form  action="." method="post">
     <!--It was created a the forms-->
+    {% csrf_token %}
     <h3>¡Esto no es una historia clinica!</h3>
     <div>
     <h4>Este formulario nos permite como estudiantes el poder contactarte, por lo cual estos datos estan protegidos.</h4>
@@ -32,6 +34,7 @@
         <label for="datebirh">Fecha de nacimiento</label>
         <input type="date" name="datebirth" id=""> 
     </div>
-
+        <input type="submit" value="Enviar" >
+    </form>
 </body>
 </html>

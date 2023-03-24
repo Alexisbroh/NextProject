@@ -7,9 +7,11 @@
     <title>Treatments</title>
 </head>
 <body>
-    <form action="">
+    <form action="." method="post">
     <h2>¿Qué es lo que ando buscando?</h2>
+    {% csrf_token %}
     <!-- The list was created and adjustement with the checkbox-->
+    
     <input type="checkbox" name="Atención pediátrica " id="">
     <label for="">Atención pediátrica </label>
     <input type="checkbox" name="Consulta y diagnóstico" id="">
@@ -34,6 +36,13 @@
     <label for="">¿Rayos x (aquí se incluyen panorámicas, periapicales , laterales)</label>
     <input type="checkbox" name="Rellenos y eliminación de caries" id="">
     <label for="">Rellenos y eliminación de caries</label>
+    <div>
+        <input type="submit" value="Enviar" >
+    </div>
+        <div>
+            <a href={% url 'index' %}>Regresar</a>
+        </div>
     </form>
+    
 </body>
 </html>

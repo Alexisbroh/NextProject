@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse ,JsonResponse
-from .models import  Patient
+from .models import  Patient, Student, contact_form
 
 # Create your views here.
  
@@ -12,7 +12,8 @@ def disponibilidad(request):
 
 def contactForm(request):
     return render(request, 'contact_form.html')
-
+    
+    
 def precios(request):
     return render(request, 'precios.html')
 
@@ -20,7 +21,7 @@ def tratamientos(request):
     return render(request, 'tratamientos.html')
 
 def signup(request):
-    return render(request, 'signup.html')
+    return render(request, 'account/login.html')
 
 
 

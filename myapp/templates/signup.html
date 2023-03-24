@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    
 </head>
 <body>
+        <form action="" method="post">
+        <a href="{% 'load socialaccount' %}"></a>
         <h1>Bienvenido a ToothBank</h1>
         <div>
             <h4>Antes de iniciar , favor de seleccionar que eres</h4>
@@ -19,6 +23,10 @@
         <a class="btn btn-primary" href="{% url 'index' %}"  role="button">Soy Paciente</a>
         
     </div>
+    <div>
+        <a href="{% 'provider_login_url "google' %}">Google</a>
+    </div>
+    </form>
 </body>
 </html>
 

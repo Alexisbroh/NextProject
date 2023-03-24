@@ -8,6 +8,7 @@
 </head>
 <body>
 <!--We create the landing page-->
+    <form action="" method="post">
     <div>
         <label for="2023prieces"></label>
         <a href="{% url 'precios' %}">Costos 2023</a>
@@ -20,8 +21,16 @@
     </div>
     <div>
         <label for="I'm searching disponibility"></label>
-        <a href="{% url 'disponibilidad' %}">Busco disponibilidad</a>
-        
+        <a href="{% url 'disponibilidad' %}">Busco disponibilidad</a>    
     </div>
+    <div>
+        <label for="Contacta a tu doctor"></label>
+        <a href="{% url 'contactform' %}">Encuentra a tu doctor</a> 
+       
+    </div>
+        <div>
+            <a href="{% url 'signup' %}">Regresar</a>
+        </div>
+    </form>
 </body>
 </html>
