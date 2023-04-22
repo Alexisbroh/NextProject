@@ -4,45 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
+
+
     <title>Treatments</title>
 </head>
+<style>
+    body{
+        background-color: #2E2D2D;
+        color: #019BFF;
+       }
+       navbar{
+        background-color: #2E2D2D;
+        color:#019BFF;
+       }
+       ul{
+        background-color: #2E2D2D;
+        margin: 40%;
+        padding: 40%;
+        border: 40%;
+       }
+       container{
+        background-color: #2E2D2D;
+       }
+</style>
 <body>
     <form action="." method="post">
-    <h2>¿Qué es lo que ando buscando?</h2>
+        
     {% csrf_token %}
     <!-- The list was created and adjustement with the checkbox-->
     
-    <input type="checkbox" name="Atención pediátrica " id="">
-    <label for="">Atención pediátrica </label>
-    <input type="checkbox" name="Consulta y diagnóstico" id="">
-    <label for="">Consulta y diagnóstico</label>
-    <input type="checkbox" name="Coronas y puentes  " id="">
-    <label for="">Coronas y puentes  </label>
-    <input type="checkbox" name="Extracciones de algún diente (exodoncia)" id="">
-    <label for="">Extracciones de algún diente (exodoncia)</label>
-    <input type="checkbox" name="extracciones terceros molares" id="">
-    <label for="">Extracciones terceros molares</label>
-    <input type="checkbox" name="Endodoncias (caries profundas)" id="">
-    <label for="">Endodoncias (caries profundas)</label>
-    <input type="checkbox" name="Limpiezas" id="">
-    <label for="">Limpiezas</label>
-    <input type="checkbox" name="Muestra patológica" id="">
-    <label for="">Muestra patológica</label>
-    <input type="checkbox" name="Periodoncias (procedimientos de la encía)    " id="">
-    <label for="">Periodoncias (procedimientos de la encía) </label>
-    <input type="checkbox" name="Protesis " id="">
-    <label for="">Protesis </label>
-    <input type="checkbox" name="¿Rayos x (aquí se incluyen panorámicas, periapicales , laterales)" id="">
-    <label for="">¿Rayos x (aquí se incluyen panorámicas, periapicales , laterales)</label>
-    <input type="checkbox" name="Rellenos y eliminación de caries" id="">
-    <label for="">Rellenos y eliminación de caries</label>
-    <div>
-        <input type="submit" value="Enviar" >
-    </div>
-        <div>
-            <a href={% url 'index' %}>Regresar</a>
+    <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-xl">Tratamientos disponibles</a>
         </div>
+        <div class="flex-none">
+          
+            <div class="btn ml-40">
+                <button><a href={% url 'index' %}>Regresar</a></button>
+             </div>
+          
+        </div>
+      </div>
+        <div class="container mx-16 px-80 ml-40l">
+            <ul>
+            <ol><input type="checkbox" name="Atención pediátrica " id="">
+            <label for="">Atención pediátrica </label></ol>
+
+            <ol><input type="checkbox" name="Consulta y diagnóstico" id="">
+            <label for="">Consulta y diagnóstico</label></ol>
+
+            <ol><input type="checkbox" name="Coronas y puentes  " id="">
+            <label for="">Coronas y puentes  </label></ol>
+
+            <ol><input type="checkbox" name="Extracciones de algún diente (exodoncia)" id="">
+            <label for="">Extracciones de algún diente (exodoncia)</label></ol>
+
+            <ol><input type="checkbox" name="extracciones terceros molares" id="">
+            <label for="">Extracciones terceros molares</label></ol>
+
+            <ol><input type="checkbox" name="Endodoncias (caries profundas)" id="">
+            <label for="">Endodoncias (caries profundas)</label></ol>
+
+            <ol><input type="checkbox" name="Limpiezas" id="">
+            <label for="">Limpiezas</label>
+            
+            <ol><input type="checkbox" name="Muestra patológica" id="">
+            <label for="">Muestra patológica</label></ol>
+
+            <ol><input type="checkbox" name="Periodoncias (procedimientos de la encía)    " id="">
+            <label for="">Periodoncias (procedimientos de la encía) </label></ol>
+
+            <ol><input type="checkbox" name="Protesis " id="">
+            <label for="">Protesis </label></ol>
+
+            <ol><input type="checkbox" name="¿Rayos x (aquí se incluyen panorámicas, periapicales , laterales)" id="">
+            <label for="">¿Rayos x (aquí se incluyen panorámicas, periapicales , laterales)</label></ol>
+
+            <ol><input type="checkbox" name="Rellenos y eliminación de caries" id="">
+            <label for="">Rellenos y eliminación de caries</label></ol>
+
+            <div>
+            <input type="submit" value="Enviar" >
+            </ul>
+        </div> 
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#019BFF" fill-opacity="1" d="M0,224L21.8,202.7C43.6,181,87,139,131,117.3C174.5,96,218,96,262,96C305.5,96,349,96,393,85.3C436.4,75,480,53,524,74.7C567.3,96,611,160,655,160C698.2,160,742,96,785,80C829.1,64,873,96,916,122.7C960,149,1004,171,1047,202.7C1090.9,235,1135,277,1178,250.7C1221.8,224,1265,128,1309,101.3C1352.7,75,1396,117,1418,138.7L1440,160L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"></path></svg>       
     </form>
     
 </body>
 </html>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />

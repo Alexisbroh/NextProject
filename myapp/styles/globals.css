@@ -1,0 +1,33 @@
+* {
+    background-color: #000000;
+    
+    
+}
+
+btn-square {
+    align-items:flex-start;
+
+}
+.carousel {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    overflow-x: scroll;
+}
+div#slide1.carousel-item.w-full{
+    display: contents;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+}

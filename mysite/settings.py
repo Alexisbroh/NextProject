@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ni@w-nhg0e7=2sm2st%exq=@^ceo$mtpc2y&lnvja0w9*$(v_=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'allauth.account',                      # This was a library for allauth
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google', #Here after we download our authenitcate with google
-    'crispy_forms', # here we adding styles to the login page 
+    'crispy_forms',# here we adding styles to the login page 
+     
 
 ]
 
@@ -59,10 +60,11 @@ SOCIALACCOUNT_PROVIDERS = {                                #In my case we log in
     'google': {
         'SCOPE': [
             'profile',
-            'email',                                 #those of these things is what our api can do
+            'email',
+            'https://www.googleapis.com/auth/calendar '                               #those of these things is what our api can do
         ],
         'AUTH_PARAMS': {
-            'access_type': 'online',
+            'access_type': 'offline',
         }
     }
 }
@@ -153,11 +155,14 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CRISPY_TEMPLATE_PACK ='bootstrap4'#with this code we told to crispy what framework to applied styles we want
 
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend'
 ] #Specify we are using django backend as well as the auth backend 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDICT_URL = '/'
+ACCOUNT_LOGOUT_ON_GET = False
+ACCOUNT_SIGNUP_REDIRECT_URL  = '/'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'
